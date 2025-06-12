@@ -1,14 +1,12 @@
 body {
   font-family: "Poppins", sans-serif;
-  background: #d3a7b8;
+  margin: 0;
+  padding: 0;
 }
 
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
+/* Header (Hero Section) */
 header {
+  background-color: #d3a7b8; /* Only the header has this background color */
   background-image: url("../images/nicki.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -51,10 +49,11 @@ header a {
   letter-spacing: 3px;
   text-decoration: none;
   text-transform: uppercase;
-  background: #ffff;
+  background: #ffffff;
   border-radius: 8px;
 }
 
+/* Responsive Hero */
 @media (max-width: 900px) {
   header {
     padding: 60px 0;
@@ -71,4 +70,67 @@ header a {
   header h3 {
     font-size: 12px;
   }
+}
+
+/* Footer Section */
+footer {
+  background-color: #ffffff; /* White background for footer */
+  padding: 0;
+  margin: 0;
+  color: white;
+  overflow: hidden;
+}
+
+.footer-overlay {
+  background-image: url("../images/nickifooter.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.6); /* Fallback if image doesn't load */
+  background-blend-mode: darken;
+  padding: 100px 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer h3 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+
+footer p {
+  font-weight: 400;
+  font-size: 16px;
+  opacity: 0.8;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+footer ul {
+  padding: 0;
+  margin: 0;
+}
+
+footer li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: white;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+footer a:hover {
+  opacity: 1;
+  text-decoration: underline;
 }
