@@ -1,15 +1,51 @@
+/* Global Styles */
 body {
   font-family: "Poppins", sans-serif;
+  background: #ffff;
   margin: 0;
   padding: 0;
 }
 
-/* Header (Hero Section) */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Grid Utilities */
+.grid {
+  display: grid;
+  grid-gap: 64px;
+}
+
+.grid-2-columns {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-3-columns-with-first-narrow {
+  grid-template-columns: 1fr 2fr 2fr;
+}
+
+.img-responsive {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Sections */
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+/* Hero Section */
 header {
-  background-color: #d3a7b8; /* Only the header has this background color */
   background-image: url("../images/nicki.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   color: white;
   text-align: center;
   padding: 200px 0;
@@ -42,19 +78,111 @@ header a {
   font-size: 14px;
   line-height: 1.5;
   text-align: center;
-  color: #d3a7b8;
+  color: #272044;
   padding: 16px 32px;
   margin-top: 32px;
   display: inline-block;
   letter-spacing: 3px;
   text-decoration: none;
   text-transform: uppercase;
-  background: #ffffff;
+  background: white;
   border-radius: 8px;
 }
 
-/* Responsive Hero */
-@media (max-width: 900px) {
+/* Main Content */
+main {
+  background-color: white;
+}
+
+main h2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  letter-spacing: 5px;
+  color: #272044;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+main h3 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.5;
+  color: #272044;
+  margin: 0;
+}
+
+main p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #272044;
+  opacity: 0.7;
+}
+
+/* Footer Section */
+footer {
+  color: white;
+  background-image: linear-gradient(
+      rgba(39, 32, 68, 0.9),
+      rgba(39, 32, 68, 0.9)
+    ),
+    url("../images/nickifooter.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 30px 10px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 64px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer h3 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+
+footer p {
+  font-weight: 400;
+  font-size: 16px;
+  opacity: 0.7;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+footer ul {
+  padding: 0;
+  margin: 0;
+}
+
+footer li {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+footer a {
+  color: white;
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+footer a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 960px) {
   header {
     padding: 60px 0;
   }
@@ -70,67 +198,13 @@ header a {
   header h3 {
     font-size: 12px;
   }
-}
 
-/* Footer Section */
-footer {
-  background-color: #ffffff; /* White background for footer */
-  padding: 0;
-  margin: 0;
-  color: white;
-  overflow: hidden;
-}
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
+  }
 
-.footer-overlay {
-  background-image: url("../images/nickifooter.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0.6); /* Fallback if image doesn't load */
-  background-blend-mode: darken;
-  padding: 100px 20px;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-footer h3 {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 30px;
-  margin-bottom: 15px;
-}
-
-footer p {
-  font-weight: 400;
-  font-size: 16px;
-  opacity: 0.8;
-  line-height: 24px;
-  margin-bottom: 10px;
-}
-
-footer ul {
-  padding: 0;
-  margin: 0;
-}
-
-footer li {
-  list-style: none;
-  margin-bottom: 10px;
-}
-
-footer a {
-  color: white;
-  opacity: 0.8;
-  text-decoration: none;
-}
-
-footer a:hover {
-  opacity: 1;
-  text-decoration: underline;
+  section {
+    padding: 30px;
+  }
 }
